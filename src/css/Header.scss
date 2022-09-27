@@ -1,0 +1,44 @@
+@use "common";
+
+.Header {
+    position: relative;
+    line-height: 8rem;
+    background: common.$wColor;
+
+    .gnb {
+        position: relative;
+
+        ul {
+            display: flex;
+            gap: 40px;
+            font-size: 1.5rem;
+            li {
+                position: relative;
+            }
+
+            &.right {
+                gap: 20px;
+                font-size: 2.5rem;
+                color: rgba(0, 0, 0, 0.5);
+
+                span {
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                }
+            }
+        }
+    }
+
+    h1 {
+        position: absolute;
+        top: 0;
+        left: 8rem;
+    }
+
+    .right {
+        position: absolute;
+        top: 0;
+        right: 8rem;
+    }
+}
