@@ -1,30 +1,48 @@
-@use "common";
+@use 'common';
 
 .Header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
     line-height: 8rem;
-    background: common.$wColor;
+
+    &.on .gnb {
+        background: common.$wColor;
+    }
 
     .gnb {
         position: relative;
+        transition: 0.5s;
 
         ul {
             display: flex;
             gap: 40px;
             font-size: 1.5rem;
+
             li {
                 position: relative;
             }
 
-            &.right {
+            &.rt {
                 gap: 20px;
                 font-size: 2.5rem;
-                color: rgba(0, 0, 0, 0.5);
+                color: rgba(0, 0, 0, 0.35);
 
                 span {
                     position: absolute;
-                    top: 1rem;
-                    right: 1rem;
+                    width: 2rem;
+                    height: 2rem;
+                    font-size: 1.25rem;
+                    padding: 0.5rem;
+                    top: 1.5rem;
+                    right: -1rem;
+                    background: common.$mainColor;
+                    color: common.$wColor;
+                    border-radius: 50%;
+                    line-height: 0.8;
+                    text-align: center;
                 }
             }
         }
@@ -36,9 +54,11 @@
         left: 8rem;
     }
 
-    .right {
+    .rt {
         position: absolute;
         top: 0;
         right: 8rem;
     }
+
+
 }
