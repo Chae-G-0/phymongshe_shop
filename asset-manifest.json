@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/phymongshe_shop/static/css/main.a16bcc62.css",
-    "main.js": "/phymongshe_shop/static/js/main.3ef29dbc.js",
+    "main.css": "/phymongshe_shop/static/css/main.c5f68169.css",
+    "main.js": "/phymongshe_shop/static/js/main.ddcf5cea.js",
+    "static/media/main_m03.jpg": "/phymongshe_shop/static/media/main_m03.48a0b8f36124cbe7a890.jpg",
+    "static/media/main_m02.jpg": "/phymongshe_shop/static/media/main_m02.1559ec9b1e18beb50645.jpg",
+    "static/media/main_m01.jpg": "/phymongshe_shop/static/media/main_m01.fb9e5a378be02e62097c.jpg",
     "index.html": "/phymongshe_shop/index.html",
-    "main.a16bcc62.css.map": "/phymongshe_shop/static/css/main.a16bcc62.css.map",
-    "main.3ef29dbc.js.map": "/phymongshe_shop/static/js/main.3ef29dbc.js.map"
+    "main.c5f68169.css.map": "/phymongshe_shop/static/css/main.c5f68169.css.map",
+    "main.ddcf5cea.js.map": "/phymongshe_shop/static/js/main.ddcf5cea.js.map"
   },
   "entrypoints": [
-    "static/css/main.a16bcc62.css",
-    "static/js/main.3ef29dbc.js"
+    "static/css/main.c5f68169.css",
+    "static/js/main.ddcf5cea.js"
   ]
 }
