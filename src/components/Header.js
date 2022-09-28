@@ -5,7 +5,7 @@ import "../css/Header.scss";
 import { FiShoppingCart, FiUserPlus, FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ cart }) => {
     const [on, setOn] = useState(false);
     useEffect(() => {
         const scrollEvent = () => {
@@ -36,7 +36,7 @@ const Header = () => {
                     </li>
                     <li>
                         <FiShoppingCart />
-                        <span>0</span>
+                        <span>{cart.length}</span>
                     </li>
                     <li>
                         <FiSearch />

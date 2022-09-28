@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Main from "./pages/Main";
 import List from "./shop/List";
 import Itm from "./shop/Itm";
-import './css/ShopDetail.scss'
+import "./css/ShopDetail.scss";
 import { Route, Routes } from "react-router-dom";
 import Cart from "./shop/Cart";
 
@@ -13,9 +13,8 @@ import Cart from "./shop/Cart";
 
 const App = () => {
     const [itm, setItm] = useState();
-    const [cart, setCart] = useState([
-      {id:1, itm: 'sssssssssssssssssss', price:5000}
-    ]);
+    const [cart, setCart] = useState([]);
+
     useEffect(() => {
         const url = "https://desipossa.github.io/shop_cra/assets/data.json";
         const getProduct = async () => {
@@ -30,7 +29,7 @@ const App = () => {
                     cate: it.category,
                     price: it.price * 1450,
                     des: it.description,
-                    color: it.product_colors[0],
+                    color: it.product_colors,
                     time: it.created_at,
                     type: it.product_type,
                 };
@@ -43,18 +42,18 @@ const App = () => {
     }, []);
     return (
         <>
-            <Header />
-            
-            {
-              itm ?
-              <Routes>
-                <Route path="/" element={<Main />}/>
-                <Route path="/Cart" element={<Cart cart={cart}/>}/>
-                <Route path="/shopList" element={<List shopList={ itm }/>}/>
-                <Route path="/shopItem/:itm" element={<Itm shopList={ itm } cart={cart} setCart={setCart} />}/>
-              </Routes>
-              : <div>로딩중</div>
-            }
+            <Header cart={cart} />
+
+            {itm ? (
+                <Routes>
+                    <Route path="/" element={<Main />} />
+                    <Route path="/Cart" element={<Cart cart={cart} />} />
+                    <Route path="/shopList" element={<List shopList={itm} />} />
+                    <Route path="/shopItem/:itm" element={<Itm shopList={itm} cart={cart} setCart={setCart} />} />
+                </Routes>
+            ) : (
+                <div>로딩중</div>
+            )}
             <Footer />
         </>
     );

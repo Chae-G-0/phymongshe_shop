@@ -1,13 +1,13 @@
-@use 'common';
+@use "common";
 
 .MainSlide {
     position: relative;
-    padding: 10rem 0 0;
+    transform: translateY(-8rem);
+    height: calc(100vh - 18rem);
 
     .slick-track {
         transition-duration: 0.5ms;
     }
-
 
     .itm {
         position: relative;
@@ -40,7 +40,6 @@
                 margin: 0 0 1rem 0;
                 font-size: 1.4rem;
                 text-transform: uppercase;
-
             }
 
             p {
@@ -80,8 +79,6 @@
                 font-size: 0;
                 border: none;
                 outline: none;
-
-
             }
 
             &.slick-active button {
