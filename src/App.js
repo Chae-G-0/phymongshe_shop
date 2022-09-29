@@ -8,6 +8,7 @@ import Itm from "./shop/Itm";
 import "./css/ShopDetail.scss";
 import { Route, Routes } from "react-router-dom";
 import Cart from "./shop/Cart";
+import Category from "./shop/Category";
 
 // https://desipossa.github.io/shop_cra/assets/data.json
 
@@ -42,18 +43,22 @@ const App = () => {
     }, []);
     return (
         <>
-            <Header cart={cart} />
 
-            {itm ? (
+            {itm ? 
+            <div className="wrapper">
+                <Header cart={cart} shopList={itm}/>
                 <Routes>
-                    <Route path="/" element={<Main />} />
+                    <Route path="/" element={<Main shopList={itm}/>}  />
                     <Route path="/Cart" element={<Cart cart={cart} />} />
-                    <Route path="/shopList" element={<List shopList={itm} />} />
+                    <Route path="/shopList/" element={<List shopList={itm} />} />
+                    <Route path="/shopList/:cate" element={<Category shopList={itm} />} />
                     <Route path="/shopItem/:itm" element={<Itm shopList={itm} cart={cart} setCart={setCart} />} />
                 </Routes>
-            ) : (
+            </div>
+            
+             : 
                 <div>로딩중</div>
-            )}
+            }
             <Footer />
         </>
     );
