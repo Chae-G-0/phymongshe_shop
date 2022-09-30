@@ -1,13 +1,17 @@
-import React from 'react'
-import CategorySlider from './CategorySlider';
-import MainCategory from './MainCategory'
+import React from "react";
+import CategorySlider from "./CategorySlider";
+import MainCategory from "./MainCategory";
 
-const MainProuctSlide = ({ shopList, category }) => {
+const MainProuctSlide = ({ shopList, category, tit, des }) => {
     return (
-        <div>
-            <CategorySlider shopList={shopList} category={category} />
-        </div>
-    )
-}
+        <section className="sce slide_">
+            <h2>{tit}</h2>
+            <p>{des}</p>
+            <div className="inner">
+                <CategorySlider shopList={shopList} category={category} arrow={true} dots={true} />
+            </div>
+        </section>
+    );
+};
 
 export default MainProuctSlide;
