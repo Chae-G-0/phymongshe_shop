@@ -54,12 +54,12 @@ const App = () => {
                     <Route path="/shopList/:cate" element={<Category shopList={itm} />} />
                     <Route path="/shopItem/:itm" element={<Itm shopList={itm} cart={cart} setCart={setCart} />} />
                 </Routes>
+                <Footer />
             </div>
             
              : 
                 <div>로딩중</div>
             }
-            <Footer />
         </>
     );
 };
